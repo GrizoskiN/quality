@@ -1,3 +1,5 @@
+import Menu from '@/components/Menu'
+import Submenu from '@/components/Submenu'
 import '@/styles/globals.css'
 import localFont from "next/font/local"
 export const industryFont = localFont({ src: [
@@ -11,6 +13,8 @@ variable:"--Industry-font"
 export default function App({ Component, pageProps }) {
   return (
     <main className={industryFont.className}>
+      <Menu/>
+      <Submenu/>
   <Component {...pageProps} />
   </main>)
 }

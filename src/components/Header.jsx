@@ -4,7 +4,7 @@ import HeaderImage from "/public/img/header.jpg"
 const Header = () => {
   return (
     <div className="w-full ">
-      <div className="flex items-center justify-center h-screen flex-col w-2/4 text-center m-auto">
+      <div className="flex items-center justify-center h-[90vh] flex-col w-2/4 text-center m-auto">
       <h1 className="text-6xl font-bold">Building trust through every {"\n"} <span className="border-b-8 border-yellow ">precise</span> estimate</h1>
     <button className="bg-white px-11 py-3 text-royal mt-16 text-2xl font-light relative">WORK WITH US
     <span className="absolute -bottom-4 -right-4"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

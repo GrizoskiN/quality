@@ -1,3 +1,4 @@
+
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -7,6 +8,7 @@ export default function Document() {
       <link rel="stylesheet" href="https://use.typekit.net/bwp0bnl.css"></link>
       </Head>
       <body>
+        
         <Main />
         <NextScript />
       </body>
