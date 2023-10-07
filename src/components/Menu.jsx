@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const Menu = () => {
   return (
-   <div className="w-full lg:border-b-[1px] mt-5 border-gray-600 ">
+   <div className="w-full lg:border-b-[1px] mt-5 border-gray-600 z-20 relative text-white">
      <div className="hidden lg:flex w-10/12 m-auto justify-evenly items-center grow text-sm font-thin mb-3  ">
       <div className="flex justify-between w-2/4">
         <Link href="#">NEWS</Link>
