@@ -68,6 +68,7 @@ export async function getStaticProps() {
   `;
   const response = await client.query({
     query: GET_POSTS,
+    revalidate: 10,
   });
   const posts = response?.data?.posts?.nodes;
   return {
