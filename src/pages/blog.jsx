@@ -17,7 +17,7 @@ export default function Blog({ posts }) {
 
         <div className="grid grid-cols-3">
           {posts.map((post) => (
-            <div>
+            <div key={post.uri}>
               <Link href={post.uri}>
                 {" "}
                 <Image
@@ -68,10 +68,11 @@ export async function getStaticProps() {
   `;
   const response = await client.query({
     query: GET_POSTS,
-    revalidate: 10,
+    
   });
   const posts = response?.data?.posts?.nodes;
   return {
+    revalidate: 10,
     props: {
       posts,
     },

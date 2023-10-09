@@ -18,9 +18,10 @@ export default function BlogSection({ posts }) {
       </div>
       <div className="flex flex-col col-span-2 ">
         {posts.slice(0, 3).map((post) => (
-          <div className="w-full flex my-11 h-full ">
+          <div className="w-full flex my-11 h-full" key={post.uri}>
             <Link href={post.uri} className="h-[25rem] w-[25rem] ">
               <Image
+                 key={post.uri}
                 src={post.featuredImage.node.sourceUrl}
                 width={500}
                 height={500}
