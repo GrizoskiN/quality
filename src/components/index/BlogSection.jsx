@@ -11,7 +11,10 @@ export default function BlogSection({ posts }) {
   return (
     <div className="w-2/3 m-auto grid grid-cols-3 ">
       <div className="relative">
-      <h1 className="text-8xl [writing-mode:vertical-lr] rotate-180 absolute top-32"> News & Insights  </h1>
+        <h1 className="text-8xl [writing-mode:vertical-lr] rotate-180 absolute top-32">
+          {" "}
+          News & Insights{" "}
+        </h1>
       </div>
       <div className="flex flex-col col-span-2 ">
         {posts.slice(0, 3).map((post) => (
