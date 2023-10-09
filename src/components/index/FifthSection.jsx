@@ -52,6 +52,7 @@ const FifthSection = () => {
             
              
                 <Image
+                  key={id}
                   src={image}
                   width={500}
                   className={`${select == id ? 'opacity-100' : 'opacity-0'} absolute max-w-full max-h-full left-1/2 top-1/2 -translate-y-1/2  -translate-x-1/2 transition-all duration-300`}
