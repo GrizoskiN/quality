@@ -14,7 +14,7 @@ export default function PostSlug({ post }) {
 
 export async function getStaticProps({ params }) {
   const GET_POST_BY_URI = gql`
-    query AllPosts($id: ID = "/") {
+    query AllPosts($id: ID = ID!) {
       post(id: $id, idType: URI) {
         author {
           node {
