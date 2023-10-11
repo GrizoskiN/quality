@@ -22,7 +22,7 @@ export default function BlogSection({ posts }) {
             <Link href={post.uri} className="h-[25rem] w-[25rem] ">
               <Image
                  key={post.uri}
-                src={post.featuredImage.node.sourceUrl}
+                src={post.featuredImage?.node.sourceUrl}
                 width={500}
                 height={500}
                 className="w-full h-full object-cover"

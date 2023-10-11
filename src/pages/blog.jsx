@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
               <Link href={post.uri}>
                 {" "}
                 <Image
-                  src={post.featuredImage.node.sourceUrl}
+                  src={post.featuredImage?.node.sourceUrl}
                   width={500}
                   height={500}
                   className="w-96 h-96"
