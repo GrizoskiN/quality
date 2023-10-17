@@ -29,9 +29,7 @@ export async function getStaticProps({ params }) {
         uri
         title
         excerpt
-        seo {
-          metaKeywords
-        }
+        
       }
     }
   `;
