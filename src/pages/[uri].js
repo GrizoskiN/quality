@@ -27,7 +27,7 @@ export default function PostSlug({ post }) {
       </div>
 
       <FacebookShareButton
-        url={post.url}
+        url={`https://quality-ruby.vercel.app/${post.url}`}
         quote={post.title}
         hashtag={"#QualityEstimation"}>
         <FacebookIcon size={32} round />
