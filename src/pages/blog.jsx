@@ -11,7 +11,7 @@ export default function Blog({ posts }) {
   return (
     <div>
       <Head></Head>
-      <main className="w-2/3 m-auto">
+      <main className="w-2/3 m-auto ">
         <h1>Learn more about the latest news in the industry</h1>
         <p>Learn more about your business here!</p>
 
@@ -24,7 +24,7 @@ export default function Blog({ posts }) {
                   src={post.featuredImage?.node.sourceUrl}
                   width={500}
                   height={500}
-                  className="w-96 h-96"
+                  className="w-96 h-96 object-cover"
                 />
               </Link>
               <Link href={post.uri} key={post.uri}>

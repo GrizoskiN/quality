@@ -36,7 +36,7 @@ export default function PostSlug({ post }) {
       <div className="w-[90%] lg:w-2/3 m-auto max-w-[800px] font-light text-xl leading-[2rem] text-gray-700 relative ">
         <article
           dangerouslySetInnerHTML={{ __html: post.content }}
-          className=""></article>
+          className="[&>h2]:text-black [&>h2]:text-3xl"></article>
       </div>
     </div>
   );
@@ -63,7 +63,7 @@ export async function getStaticProps({ params }) {
         content
         date
         uri
-        
+
         title
         excerpt
       }
