@@ -3,13 +3,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const FirstSection = () => {
   return (
     <div className="py-16 bg-[#0A0B0F] text-white"> 
-      <h1 className="w-2/3 m-auto text-5xl mb-16 ">
+      <h1 className="w-[90%] xl:w-2/3 m-auto text-2xl xl:text-5xl mb-16 ">
         Delivering a{" "}
         <span className="text-yellow">premium estimation quality</span> on every
         project we build.
       </h1>
 
-      <Tabs defaultValue="premium" className="w-2/3 m-auto ">
+      <Tabs defaultValue="premium" className="w-[90%] xl:w-2/3 m-auto ">
         <TabsList>
           <TabsTrigger value="takeoff">Takeoff Services</TabsTrigger>
           <TabsTrigger value="standard">
@@ -20,7 +20,7 @@ const FirstSection = () => {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="takeoff">
-          <div className="my-5  ">
+          <div className="xl:my-5  ">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
               et sequi iste reprehenderit, dolorem, numquam delectus iure

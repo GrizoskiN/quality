@@ -54,10 +54,10 @@ const ThirdSection = () => {
     setWidth(menuRef.current.scrollWidth - menuRef.current.offsetWidth);
   }, []);
   return (
-    <div className="bg-white relative text-white">
+    <div className="bg-white relative text-white overflow-hidden">
       <div className="flex items-center justify-between w-3/4 m-auto ">
-        <h1 className="text-royal text-9xl font-bold">Our Services</h1>
-        <Image src={worker} width={700} className="z-10" />
+        <h1 className="text-royal text-4xl lg:text-6xl xl:text-9xl font-bold">Our Services</h1>
+        <Image src={worker} width={700} className="z-10 lg:w-1/2" />
       </div>
       <div className="absolute top-32 w-full  overflow-hidden -z-0">
         <Marquee
@@ -77,13 +77,13 @@ const ThirdSection = () => {
             {services.map((service, id) => (
               <li
                 key={id}
-                className="cursor-pointer w-[33rem] h-[35rem] bg-royal/70 hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-start p-10 relative z-20  overflow-hidden group transition duration-700 ease-in-out">
-                <div className="mt-32  z-20 group-hover:bg-opacity-50 ">
+                className="cursor-pointer w-64 lg:w-[23rem] xl:w-[33rem] h-64 lg:h-[23rem] xl:h-[35rem] bg-royal/70 hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-start p-5 lg:p-10 relative z-20  overflow-hidden group transition duration-700 ease-in-out">
+                <div className="lg:mt-16 xl:mt-32  z-20 group-hover:bg-opacity-50 ">
                   <Image
                     src={service.image}
                     className="text-white text-4xl bg-black/10 font-semibold  transition-all duration-300"
                   />
-                  <p className="text-white font-light text-2xl opacity-50 mt-5 group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                  <p className="text-white font-light lg:text-2xl opacity-50 mt-5 group-hover:opacity-100  transition-all duration-300 ease-in-out">
                     {service.text1}
                   </p>
                 </div>

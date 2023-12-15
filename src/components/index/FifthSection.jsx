@@ -18,15 +18,15 @@ const FifthSection = () => {
     setSelect(id);
   };
   return (
-    <div className=" w-2/3 m-auto  my-32">
-      <h1 className="text-9xl font-bold">Our clients</h1>
+    <div className="w-[90%] lg:w-2/3 m-auto my-16 xl:my-32">
+      <h1 className="text-3xl md:text-5xl xl:text-9xl font-bold">Our clients</h1>
 
       <div className="flex  m-auto justify-between items-center">
         <div className="w-full">
           {clients.map(({ id, name }) => (
             <ul key={id} className="flex items-center transition-all duration-300 hover:duration-500">
-              {select ===id && <span className="mr-5 ">
-                <svg className={`${select === id ? "opacity-100" : "opacity-0"} transition-all duration-300`}
+              {select ===id && <span className="lg:mr-5 ">
+                <svg className={`${select === id ? "opacity-100" : "opacity-0"} hidden lg:block lg:w-7 transition-all duration-300`}
                   width="68"
                   height="68"
                   viewBox="0 0 98 98"
@@ -41,13 +41,13 @@ const FifthSection = () => {
               </span>}
               <li
                 onMouseOver={() => handleClick(id)}
-                className="text-5xl my-5 cursor-pointer transition-all duration-300">
+                className=" text-xl xl:text-5xl  my-2 xl:my-5 cursor-pointer transition-all duration-300">
                 {name}
               </li>
             </ul>
           ))}
         </div>
-        <div className=" h-[45rem] relative flex justify-center items-center w-full ">
+        <div className="hidden md:h-[20rem] xl:h-[45rem] relative md:flex justify-center items-center w-full ">
           {clients.map(({ id, image }) => (
             
              
@@ -55,7 +55,7 @@ const FifthSection = () => {
                   key={id}
                   src={image}
                   width={500}
-                  className={`${select == id ? 'opacity-100' : 'opacity-0'} absolute max-w-full max-h-full left-1/2 top-1/2 -translate-y-1/2  -translate-x-1/2 transition-all duration-300`}
+                  className={`${select == id ? 'opacity-100' : 'opacity-0'} object-contain absolute max-w-full max-h-full left-1/2 top-1/2 -translate-y-1/2  -translate-x-1/2 transition-all duration-300`}
                 />
            
             

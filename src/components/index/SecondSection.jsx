@@ -46,9 +46,9 @@ const SecondSection = () => {
   }, []);
   return (
     <div className=" w-full m-auto overflow-hidden relative text-white ">
-      <div className="w-2/3 m-auto my-16 ">
+      <div className="w-[90%] xl:w-2/3 m-auto my-16 ">
         <h1 className="text-5xl">How do we work?</h1>
-        <div className="flex items-start mt-7">
+        <div className="flex flex-col lg:flex-row items-start mt-7">
           <span className="mt-2">
             <svg
               width="116"
@@ -59,7 +59,7 @@ const SecondSection = () => {
               <rect width="116" height="5" fill="#D4EC42" />
             </svg>
           </span>
-          <p className="w-1/3 ml-5">
+          <p className="xl:w-1/3 xl:ml-5">
             Are you interested in learning more about bid estimation? When you
             choose us as your electrical estimate, we will follow the steps
             outlined in this quick and simple guide.
@@ -74,15 +74,15 @@ const SecondSection = () => {
           {services.map((service, id) => (
             <li
               key={id}
-              className="cursor-pointer w-[60rem] h-[30rem] bg-royal/70 hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-center p-10 relative overflow-hidden group transition duration-700 ease-in-out">
+              className="cursor-pointer w-96 lg:w-[60rem] h-auto lg:h-[30rem] bg-royal/70 lg:hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-center px-5 py-10 lg:p-10 relative overflow-hidden group transition duration-700 ease-in-out">
               <div>
-                <h1 className="text-white text-4xl absolute top-3 left-5 font-semibold group-hover:text-opacity-10 group-hover:text-[9rem] transition-all duration-300">
+                <h1 className="text-white text-2xl  xl:text-4xl absolute top-3 left-5 font-semibold lg:group-hover:text-opacity-10 lg:group-hover:text-[9rem] transition-all duration-300">
                   {service.name}
                 </h1>
-                <p className="text-white font-light text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                <p className="text-white font-light mt-5 lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
                   {service.text1}
                 </p>
-                <p className="text-white mt-3 font-light text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                <p className="text-white mt-3 font-light lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
                   {service.text2}
                 </p>
               </div>
@@ -103,7 +103,7 @@ const SecondSection = () => {
       <Image
         src={secondsection}
         width={2000}
-        className="absolute w-full top-0 -z-10"
+        className="absolute w-full h-full object-cover top-0 -z-10"
       />
     </div>
   );

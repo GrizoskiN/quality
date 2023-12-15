@@ -11,7 +11,7 @@ const SixthSection = () => {
   return (
     <div className="bg-black py-24">
       <h1 className="text-white text-center text-5xl mb-11">By the numbers</h1>
-     <div className="grid grid-cols-3 w-2/3 m-auto text-center justify-start">
+     <div className="grid md:grid-cols-3 w-[90%] xl:w-2/3 m-auto text-center justify-start">
      {numbers.map(({id, number, text})=>
       <div key={id} className="w-2/3 m-auto self-start my-11">
         <h1 className="text-5xl text-yellow font-medium italic mb-5">{number}</h1>
