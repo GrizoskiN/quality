@@ -8,4 +8,4 @@ const Subcontractors = () => {
   )
 }
 
-export default subcontractors
+export default Subcontractors
