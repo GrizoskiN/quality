@@ -3,13 +3,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+
 
 const schema = yup
   .object({
@@ -25,8 +19,7 @@ const schema = yup
 
 const ContactForm = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
- const [value, setValue]= useState()
+ 
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -51,7 +44,7 @@ const ContactForm = () => {
       body: JSON.stringify(data),
     });
     reset();
-    console.log(watch('project'))
+   
   
   };
 
