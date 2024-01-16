@@ -44,7 +44,7 @@ const Menu = () => {
           </Link>
         </div>
         <div className="flex justify-evenly w-2/4 items-center">
-          <Link href="/subcontractors">SUBCONTRACTORS</Link>
+          <Link href="/">SUBCONTRACTORS</Link>
           <Link href="/careers" className="bg-primary px-5 py-2 text-white">
             CAREERS
           </Link>
