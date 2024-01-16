@@ -30,7 +30,9 @@ export default function BlogSection({ posts }) {
           <div
             className="w-full flex flex-col gap-5 lg:flex-row my-5 "
             key={post.uri}>
-            <Link href={post.uri} className="h-48 md:h-80 lg:h-[25rem]  lg:w-[25rem]">
+            <Link
+              href={post.uri}
+              className="h-48 md:h-80 lg:h-[25rem]  lg:w-[25rem]">
               <Image
                 key={post.uri}
                 src={post.featuredImage?.node.sourceUrl}

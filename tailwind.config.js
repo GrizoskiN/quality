@@ -26,6 +26,7 @@ module.exports = {
           to: { height: 0 },
         },
       },
+      
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -34,7 +35,8 @@ module.exports = {
         "primary" : "#4B5AE3",
         "royal" : "#191E31",
         "yellow" : "#E5FF44",
-      }
+      },
+     
     },
   },
   plugins: [require("tailwindcss-animate")],

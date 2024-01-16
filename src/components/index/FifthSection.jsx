@@ -4,12 +4,12 @@ import comm from "../../../public/img/commercial.png";
 import comm2 from "../../../public/img/cost2.png";
 const FifthSection = () => {
   const clients = [
-    { id: 0, name: "Commercial Builders", image: comm },
-    { id: 1, name: "Engineers", image: comm2 },
-    { id: 2, name: "Developers", image: comm },
-    { id: 3, name: "Lawyers", image: comm },
-    { id: 4, name: "Sub-Contractors", image: comm },
-    { id: 5, name: "Architects", image: comm },
+    { id: 0, name: "General Contractors", image: comm },
+    { id: 1, name: "Specialty Contractors", image: comm2 },
+    { id: 2, name: "MEP Contractors", image: comm },
+    { id: 3, name: "Architects", image: comm },
+    { id: 4, name: "Developers", image: comm },
+    { id: 5, name: "Builders", image: comm },
   ];
 
   const [select, setSelect] = useState("");

@@ -17,31 +17,29 @@ const ThirdSection = () => {
   const services = [
     {
       id: 0,
-      name: "Step 1",
-      text1: `Engineering Cost Estimating for HVAC, 
-      Mechanical, Electrical, and Plumbing
-      Systems`,
+     
+      text1: `Takeoff, Estimating & Cost Consulting Services for Contractors`,
       image: hvac,
       image2: hvac2,
     },
     {
       id: 1,
-      name: "Step 2",
-      text1: `Cost Projection in Business`,
+      
+      text1: `Logistics and Cost Projection for Developers`,
       image: cost,
       image2: cost2,
     },
     {
       id: 2,
-      name: "Step 3",
-      text1: `Price Approximation for Houses`,
+      
+      text1: `Single & Multi-Family Estimating for Builders`,
       image: house,
       image2: house2,
     },
     {
       id: 3,
-      name: "Step 4",
-      text1: `Expertise in Industrial Cost Estimating Services`,
+    
+      text1: `Takeoff & Estimating for Mechanical, Electrical & Plumbing Contractors`,
       image: repair,
       image2: repair2,
     },

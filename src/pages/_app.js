@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import localFont from "next/font/local";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "@/lib/apollo";
+import ScrollToTopButton from "@/components/scrollToTop";
 export const industryFont = localFont({
   src: [
     { path: "../pages/font/Industry-Book.woff2", weight: "200" },
@@ -22,7 +23,8 @@ export default function App({ Component, pageProps }) {
       <ApolloProvider client={client}>
     <main className={industryFont.className}>
       <Menu />
-      <Submenu />
+      {/* <Submenu /> */}
+      <ScrollToTopButton/>
         <Component {...pageProps} />
     </main>
       </ApolloProvider>

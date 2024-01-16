@@ -1,5 +1,7 @@
 import Image from "next/image";
 import HeaderImage from "/public/img/header.jpg";
+import Link from "next/link";
+
 
 const Header = () => {
   return (
@@ -10,7 +12,7 @@ const Header = () => {
           Building trust through every {"\n"}{" "}
           <span className="border-b-8 border-yellow ">precise</span> estimate
         </h1>
-        <button className="bg-white w-3/4 md:w-auto px-11 py-3 text-royal mt-16 md:text-2xl font-light relative">
+        <Link href="/contact" className="bg-white w-3/4 md:w-auto px-11 py-3 text-royal mt-16 md:text-2xl font-light relative">
           WORK WITH US
           <span className="hidden md:block absolute -bottom-4 -right-4">
             <svg
@@ -62,14 +64,14 @@ const Header = () => {
               />
             </svg>
           </span>
-        </button>
+        </Link>
       </div>
-    </div>
       <Image
         src={HeaderImage}
         width={2000}
-        className="absolute w-full h-[90vh]  xl:h-full object-cover   bottom-0  -z-0"
+        className="absolute w-full h-auto  xl:h-full object-cover   bottom-0  -z-0"
       />
+    </div>
     
     </>
   );
