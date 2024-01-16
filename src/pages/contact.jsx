@@ -12,10 +12,10 @@ const formSchema = z.object({
 const Contact = () => {
 
   return (
-    <div className="">
-       <section className="w-full py-12 md:py-24 lg:pt-48 ">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
+    <div className="max-w-[2000px] m-auto">
+       <section className="w-10/12 m-auto  py-12 md:py-24 lg:pt-48  ">
+          <div className="">
+            <div className="flex flex-col items-center text-left md:text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Contact Us
@@ -27,21 +27,23 @@ const Contact = () => {
             </div>
           </div>
         </section>
-  <div className="flex m-auto w-2/3">
-  <div className="lg:w-1/2">
+  <div className="flex flex-col lg:flex-row m-auto w-10/12 lg:w-2/3">
+  <div className="lg:w-1/2 lg:ml-auto flex flex-col lg:items-start text-left md:text-center">
         <h2 className="text-3xl font-bold mb-4">Our Location</h2>
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold">Acme Construction</h3>
-            <p>123 Main St, Anytown, USA</p>
+        
+          <div className="flex flex-col items-start">
+            <h3 className=" lg:text-xl font-semibold">Acme Construction</h3>
+           <div className="md:flex items-start justify-between mt-5 lg:flex-col">
+           <p>123 Main St, Anytown, USA</p>
             <p>(123) 456-7890</p>
             <p>info@acmeconstruction.com</p>
+           </div>
           </div>
         
-        </div>
+       
 
   </div>
-  <div className="lg:w-2/3">
+  <div className="w-full lg:w-2/3">
     <ContactForm/>
   </div>
     </div>
