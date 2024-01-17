@@ -8,8 +8,7 @@ import Date from "@/components/date";
 import BlogSection from "@/components/index/BlogSection";
 import HeaderImage from "/public/img/header.jpg";
 
-export default function Blog({ posts }) {
-  const paper = (
+  const paper = 
     <svg
       width="14"
       height="24"
@@ -77,7 +76,8 @@ export default function Blog({ posts }) {
         fill="white"
       />
     </svg>
-  );
+export default function Blog({ posts }) {
+  
   const truncateExcerpt = (excerpt, maxLength) => {
     if (excerpt.length <= maxLength) {
       return excerpt;
@@ -89,43 +89,44 @@ export default function Blog({ posts }) {
   return (
     <>
       <main className="w-full m-auto  bg-gray-100 relative ">
-        <div className="mb-8  m-auto text-center pt-48  pb-32">
-          <h1 className="text-[15rem] text-royal leading-[15rem]">BLOG</h1>
-          <p className="text-2xl">
+        <div className="mb-8  m-auto text-center py-24 lg:pt-48  lg:pb-32">
+          <h1 className="text-9xl md:text-[10rem] xl:text-[15rem] text-royal xl:leading-[15rem]">BLOG</h1>
+          <p className="w-10/12 m-auto xl:text-2xl">
             Learn more about the latest news in the industry
           </p>
         </div>
         <div className="w-full border-t-[1px] border-primary/30 pt-11 relative">
-          <span className="absolute h-full w-[1px] bg-primary/30 left-1/2 top-0"></span>
+          <span className="hidden lg:block absolute h-full w-[1px] bg-primary/30 left-1/2 top-0"></span>
 
-          <div className="grid grid-cols-2 gap-5 w-10/12 m-auto px-[2.5rem]  ">
+          <div className="grid lg:grid-cols-2 gap-5  xl:w-10/12 m-auto xl:px-[2.5rem]  ">
             {posts.map((post, index) => (
               <div
                 key={post.uri}
-                className=" max-w-[80rem] w-[90%] m-auto mt-0 flex flex-col h-[50rem] border-b-[1px] mb-3 pb-11 border-primary/30">
+                className=" max-w-[80rem] w-[90%] m-auto mt-0 flex flex-col  border-b-[1px] mb-3 pb-11 border-primary/30">
                 <Link
                   href={post.uri}
-                  className="flex flex-col items-center bg-gray-300">
+                  className="flex flex-col items-center bg-gray-300 overflow-hidden">
                   <Image
                     src={post.featuredImage?.node.sourceUrl}
                     width={500}
                     height={500}
-                    className={`w-full  h-[25rem] object-cover`}
+                    className={`w-full h-[20rem]  object-cover hover:scale-[105%] duration-300 `}
                   />
                 </Link>
-                <Date dateString={post.date}></Date>
-                <h1 className="text-5xl my-5"> {post.title}</h1>
-                <p>{post.author.node.name}</p>
+                <Date className="text-royal/20" dateString={post.date}></Date>
+                <h1 className="text-xl xl:text-5xl my-5"> {post.title}</h1>
+                <p className="hidden lg:block">{post.author.node.name}</p>
                 <article
                   className="text-royal font-light xl:text-xl mb-5 "
                   dangerouslySetInnerHTML={{
                     __html: truncateExcerpt(post.excerpt, 250),
                   }}></article>
-                <Link
-                  href={post.uri}
-                  className="bg-primary rounded-full text-white text-2xl px-11 py-3 w-fit mt-auto flex items-center">
-                  <span className="mr-3">{paper}</span> Read The Article
-                </Link>
+             <Link href={post.uri}  className="relative overflow-hidden group bg-primary rounded-full text-white text-2xl px-11 py-3 w-fit mt-11 flex items-center transition-colors duration-300 ease-out">
+                 <span className="mr-3 z-30">{paper}</span> <h3 className="z-30 group-hover:tracking-wide duration-300">Read The Article</h3>
+                                
+                 <span className=" absolute bg-accent left-1/2 -translate-x-1/2 w-16 h-16 rounded-full -bottom-16 group-hover:h-48 group-hover:w-80 group:hover:left-0                transition-all duration-300 z-20"></span>
+              </Link>
+
               </div>
             ))}
           </div>

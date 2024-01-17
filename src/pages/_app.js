@@ -1,4 +1,5 @@
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import Submenu from "@/components/Submenu";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
@@ -26,6 +27,7 @@ export default function App({ Component, pageProps }) {
       {/* <Submenu /> */}
       <ScrollToTopButton/>
         <Component {...pageProps} />
+        <Footer/>
     </main>
       </ApolloProvider>
   );

@@ -30,9 +30,11 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "spin-slow" : "spin 3s linear infinite"
       },
       colors: {
         "primary" : "#4B5AE3",
+        "accent" : "#6674F6",
         "royal" : "#191E31",
         "yellow" : "#E5FF44",
       },

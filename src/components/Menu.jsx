@@ -8,7 +8,7 @@ const Menu = () => {
   const router = useRouter();
 
   const homePage = router.pathname === "/";
-  const isContactPage = router.pathname === "/contact";
+  const blogPage = router.pathname === `/blog/`;
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,7 +30,7 @@ const Menu = () => {
     <>
     
     <div
-      className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage ? "bg-transparent text-white" : "text-royal"} ${scrolled ? " " : ""} border-gray-300 duration-300 ease-in-out`} >
+      className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage  ? "bg-transparent text-white" : ""}  ${ blogPage ? "text-white" : "text-royal"} border-gray-300 duration-300 ease-in-out`} >
       <div className="hidden lg:flex w-2/3 m-auto justify-evenly items-center grow text-sm font-thin mb-3  ">
         <div className="flex justify-evenly w-2/4">
           <Link href="/blog">NEWS</Link>
