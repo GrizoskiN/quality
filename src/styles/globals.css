@@ -2,4 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.slide-in {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #6674F6;
+    transform-origin: bottom;
+}
 
+.slide-out{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4B5AE3;
+    transform-origin: bottom;
+    z-index: 99;
+}
