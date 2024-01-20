@@ -11,12 +11,32 @@ import SixthSection from "@/components/index/SixthSection";
 import BlogSection from "@/components/index/BlogSection";
 import { client } from "@/lib/apollo";
 import { gql } from "@apollo/client";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
   return (
-    <main className="">
+   <>
+   <Head>
+    <title>Quality Estimation</title>
+    <meta
+          content='Quality Estimation is a estimation and development company from San Diego,
+          California that specializes in creating the fastest project estimations. Contact us today for a free consultation!'
+          name='description'
+          key='desc'
+        />
+        <meta
+          property='og:title'
+          content='Quality Estimation company, San Diego, USA'
+        />
+        <meta property='og:image' content='/img/logo.png' />
+        <meta
+          name='keywords'
+          content='Quality Estimation company, San Diego, USA, estimation, estimations, building projects'
+        />
+   </Head>
+   <main className="">
       <Header />
       <FirstSection />
       <SecondSection />
@@ -26,6 +46,7 @@ export default function Home({ posts }) {
       <SixthSection />
       <BlogSection posts={posts} />
     </main>
+   </>
   );
 }
 export async function getStaticProps() {

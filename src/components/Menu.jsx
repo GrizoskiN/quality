@@ -13,11 +13,12 @@ const Menu = (props) => {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false);
 
-  const menuOpen = <svg className="w-6 fill-[#fff]" width="240" height="146" viewBox="0 0 240 146" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="23" width="217" height="22" rx="11" fill="#191E31"/>
-  <rect y="62" width="217" height="22" rx="11" fill="#191E31"/>
-  <rect x="23" y="124" width="217" height="22" rx="11" fill="#191E31"/>
+  const menuOpen = <svg className={`w-6 ${homePage ? "fill-white" : "fill-black"}  `} width="240" height="146" viewBox="0 0 240 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="23" width="217" height="22" rx="11" />
+  <rect y="62" width="217" height="22" rx="11" />
+  <rect x="23" y="124" width="217" height="22" rx="11" />
   </svg>
+
   
   
   const menuClosed = <svg className="w-6" width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +54,7 @@ const Menu = (props) => {
       className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage  ? "bg-transparent text-white" : ""}  ${ uri ? "text-white" : ""} border-gray-300 duration-300 ease-in-out`} >
       <div className="hidden lg:flex lg:w-10/12 xl:w-2/3 m-auto justify-evenly items-center grow text-sm font-thin mb-3  ">
         <div className="flex justify-evenly w-2/4">
-          <Link href="/blog">NEWS</Link>
+          <Link href="/blog">BLOG</Link>
           <Link href="/contact">CONTACT</Link>
           {/* <Link href="#">LOCATIONS</Link>
         <Link href="#">CERTIFICATES</Link> */}
@@ -95,7 +96,7 @@ const Menu = (props) => {
           <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/projects">Projects</Link></div>
           <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/experience">Experience</Link></div>
           <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/about">About us</Link></div>
-          <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/blog">News</Link></div>
+          <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/blog">Blog</Link></div>
           <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/contact">Contact</Link></div>
           <div  onClick={handleMenu} className="border-b-[1px] py-3 border-white/20 w-full"><Link href="/careers" className="bg-primary px-5 py-2 rounded-sm">Careers</Link>
           </div>
