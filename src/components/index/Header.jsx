@@ -69,7 +69,7 @@ const Header = () => {
       <Image
         src={HeaderImage}
         width={2000}
-        className="absolute w-full h-auto  xl:h-full object-cover   bottom-0  -z-0"
+        className="absolute w-full h-full top-0 xl:h-full object-cover   -z-0"
       />
     </div>
     
