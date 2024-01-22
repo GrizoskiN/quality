@@ -121,7 +121,7 @@ const technology = (
 const Expertise = () => {
   return (
     <div>
-      <h1 className="w-2/3 m-auto mt-48 lg:text-5xl">
+      <h1 className="w-10/12 lg:w-2/3 m-auto mt-16 lg:mt-48 text-2xl lg:text-5xl">
         Welcome to Quality Estimations,{" "}
         <span className="font-light text-royal/80">
           {" "}
@@ -132,17 +132,17 @@ const Expertise = () => {
         your delivering accurate and reliable quality assessments.
       </h1>
 
-      <Image src={img1} width={1000} className="w-2/3 m-auto my-32" />
+      <Image src={img1} width={1000} className= " lg:w-2/3 m-auto my-16  lg:my-32" />
 
-      <h1 className="w-2/3 m-auto mt-48 lg:text-5xl">Our Approach </h1>
-      <p className="w-2/3 m-auto mt-5 text-2xl">
+      <h1 className="w-10/12 lg:w-2/3 m-auto mt-16 lg:mt-48 text-3xl lg:text-5xl">Our Approach </h1>
+      <p className="w-10/12 lg:w-2/3 m-auto mt-5 text-2xl text-gray-600">
         At Quality Estimations, we leverage cutting-edge technologies and
         industry-best practices to provide comprehensive quality estimation
         solutions. Our team of experienced professionals employs a meticulous
         approach, ensuring precision and reliability in every assessment.
       </p>
 
-      <div className=" py-32  lg:py-48 my-32 relative">
+      <div className=" py-32  lg:py-48 my-16 lg:my-32 relative">
         <Image
           src={img}
           width={5000}
@@ -351,7 +351,7 @@ const Expertise = () => {
       </div>
       <Image src={call} width={2000} className="absolute w-full h-full top-0  object-cover -z-10"/>
     </div>
-    <h1 className="w-2/3 m-auto mt-48 lg:text-5xl">
+    <h1 className="w-10/12 lg:w-2/3 m-auto mt-16 lg:mt-48 text-2xl lg:text-5xl">
     At Quality Estimations,
         <span className="font-light text-royal/80">
          
