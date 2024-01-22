@@ -13,7 +13,7 @@ const Menu = (props) => {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false);
 
-  const menuOpen = <svg className={`w-6 ${homePage ? "fill-white" : "fill-black"}  `} width="240" height="146" viewBox="0 0 240 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const menuOpen = <svg className={`w-6 ${homePage || {uri} ? "fill-white" : "fill-black"}  `} width="240" height="146" viewBox="0 0 240 146" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect x="23" width="217" height="22" rx="11" />
   <rect y="62" width="217" height="22" rx="11" />
   <rect x="23" y="124" width="217" height="22" rx="11" />
