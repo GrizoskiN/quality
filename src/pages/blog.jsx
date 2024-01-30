@@ -1,3 +1,9 @@
+export default function Blog (){
+  return(
+    <div></div>
+  )
+}
+
 // import Head from "next/head";
 // import { client } from "@/lib/apollo";
 // import { gql } from "@apollo/client";
