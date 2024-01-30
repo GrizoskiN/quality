@@ -9,7 +9,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'qualityestimation.us',
+        hostname: 'blog.gobro.studio',
         port: '',
     
       },

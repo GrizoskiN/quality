@@ -108,8 +108,8 @@
                <div
                  key={post.uri}
                  className=" max-w-[80rem] w-[90%] m-auto mt-0 flex flex-col  border-b-[1px] mb-3 pb-11 border-primary/30">
-                 <div
-                   
+                 <Link
+                   href={post.uri}
                    className="flex flex-col items-center bg-gray-300 overflow-hidden">
                    <Image
                      src={post.featuredImage?.node.sourceUrl}
@@ -118,7 +118,7 @@
                      alt={post.title}
                      className={`w-full h-[20rem]  object-cover hover:scale-[105%] duration-300 `}
                    />
-                 </div>
+                 </Link>
                  <Date className="text-royal/20" dateString={post.date}></Date>
                  <h1 className="text-xl xl:text-5xl my-5"> {post.title}</h1>
                  <p className="hidden lg:block">{post.author.node.name}</p>
