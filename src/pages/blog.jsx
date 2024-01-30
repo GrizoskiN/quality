@@ -82,7 +82,7 @@
        />
      </svg>
  export default  function Blog({ posts }) {
-
+  console.log(posts);
    const truncateExcerpt = (excerpt, maxLength) => {
      if (excerpt.length <= maxLength) {
        return excerpt;
@@ -104,19 +104,21 @@
            <span className="hidden lg:block absolute h-full w-[1px] bg-primary/30 left-1/2 top-0"></span>
            <div className="grid lg:grid-cols-2 gap-5  xl:w-10/12 m-auto xl:px-[2.5rem]  ">
              {posts.map((post) => (
+              
                <div
                  key={post.uri}
                  className=" max-w-[80rem] w-[90%] m-auto mt-0 flex flex-col  border-b-[1px] mb-3 pb-11 border-primary/30">
-                 <Link
-                   href={post.uri}
+                 <div
+                   
                    className="flex flex-col items-center bg-gray-300 overflow-hidden">
                    <Image
                      src={post.featuredImage?.node.sourceUrl}
                      width={500}
                      height={500}
+                     alt={post.title}
                      className={`w-full h-[20rem]  object-cover hover:scale-[105%] duration-300 `}
                    />
-                 </Link>
+                 </div>
                  <Date className="text-royal/20" dateString={post.date}></Date>
                  <h1 className="text-xl xl:text-5xl my-5"> {post.title}</h1>
                  <p className="hidden lg:block">{post.author.node.name}</p>
