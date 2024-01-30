@@ -44,12 +44,12 @@ export default function Home({ posts }) {
       <FourthSection />
       <FifthSection />
       <SixthSection />
-      {/* <BlogSection posts={posts} /> */}
+      <BlogSection posts={posts} />
     </main>
    </>
   );
 }
-// export async function getStaticProps() {
+ export async function getStaticProps() {
 //   try {
 //     console.log("Fetching data...");
 //    const GET_POSTS = gql`
@@ -99,4 +99,4 @@ export default function Home({ posts }) {
 //    };
 //  }
 
-//  }
+  }

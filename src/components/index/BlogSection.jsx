@@ -1,13 +1,13 @@
-// import Blog from "@/pages/blog";
-// import Head from "next/head";
-// import { client } from "@/lib/apollo";
-// import { gql } from "@apollo/client";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { parseISO, format } from "date-fns";
-// import Date from "@/components/date";
-// const paper = 
-// <svg
+ import Blog from "@/pages/blog";
+ import Head from "next/head";
+ import { client } from "@/lib/apollo";
+ import { gql } from "@apollo/client";
+ import Image from "next/image";
+ import Link from "next/link";
+ import { parseISO, format } from "date-fns";
+ import Date from "@/components/date";
+ const paper = 
+ <svg
 //   width="14"
 //   height="24"
 //   viewBox="0 0 94 114"
@@ -73,77 +73,70 @@
 //     d="M62.2894 96.8109H22.2932C21.577 96.8109 20.9961 97.3913 20.9961 98.1079C20.9961 98.8243 21.577 99.405 22.2932 99.405H62.2894C63.0055 99.405 63.5864 98.8245 63.5864 98.1079C63.5862 97.3913 63.0053 96.8109 62.2894 96.8109Z"
 //     fill="white"
 //   />
-// </svg>
+ </svg>
+ export default function BlogSection({ posts }) {
+   const truncateExcerpt = (excerpt, maxLength) => {
+     if (excerpt.length <= maxLength) {
+       return excerpt;
+     } else {
+       // Truncate the excerpt and add an ellipsis (...) at the end
+       return excerpt.substring(0, maxLength) + "...";
+     }
+   };
+   return (
+     <div className="w-[90%] xl:w-2/3 m-auto grid xl:grid-cols-4  xl:my-16">
+       <div className="relative mt-11">
+         <h1 className="text-3xl lg:text-5xl lg:mb-11 xl:text-8xl xl:[writing-mode:vertical-lr] xl:rotate-180 xl:absolute top-32">
+           {" "}
+           News & Insights{" "}
+         </h1>
+       </div>
+       <div className="flex flex-col col-span-3 ">
+         {posts.slice(0, 3).map((post) => (
+           <div
+             className="w-full flex flex-col gap-5 lg:flex-row my-5 "
+             key={post.uri}>
+             <Link
+               href={post.uri}
+               className="h-48 md:h-80 lg:h-[25rem]  lg:w-[25rem] overflow-hidden">
+               <Image
+                 key={post.uri}
+                 src={post.featuredImage?.node.sourceUrl}
+                 width={500}
+                 height={500}
+                 className=" h-full w-full object-cover hover:scale-[105%] duration-300 "
+               />
+             </Link>
+             <div className="lg:w-1/2 xl:w-2/4  flex flex-col justify-between">
+               <h1 className="bg-[#D9D9D9] hidden lg:flex px-5 lg:py-2 w-fit tracking-[.2rem]">
+                 BLOG
+               </h1>
+               <span className="flex lg:hidden font-light text-sm">
+                 <Date dateString={post.date}></Date>
+               </span>
+               <Link href={post.uri} key={post.uri}>
+                 <h1 className="font-bold text-xl 2xl:text-3xl uppercase my-3 lg:my-6">
+                   {post.title}
+                 </h1>
+               </Link>
+               <article
+                 className="text-royal font-light xl:text-md mb-5"
+                 dangerouslySetInnerHTML={{
+                   __html: truncateExcerpt(post.excerpt, 150),
+                 }}></article>
+               <span className="hidden lg:flex">
+                 <Date className="" dateString={post.date}></Date>
+               </span>
+               <Link href={post.uri}  className="relative overflow-hidden group bg-primary rounded-full text-white  px-11 py-3 w-fit mt-11 flex items-center transition-colors duration-300 ease-out">
+                  <span className="mr-3 z-30">{paper}</span> <h3 className="z-30 group-hover:tracking-wide duration-300 ">Read The Article</h3>
+                              
+                  <span className=" absolute bg-accent left-1/2 -translate-x-1/2 w-16 h-16 rounded-full -bottom-16 group-hover:h-48 group-hover:w-80 group:hover:left-0                transition-all duration-300 z-20"></span>
+               </Link>
+             </div>
+           </div>
+         ))}
+       </div>
+     </div>
+   );
+ }
 
-// export default function BlogSection({ posts }) {
-//   const truncateExcerpt = (excerpt, maxLength) => {
-//     if (excerpt.length <= maxLength) {
-//       return excerpt;
-//     } else {
-//       // Truncate the excerpt and add an ellipsis (...) at the end
-//       return excerpt.substring(0, maxLength) + "...";
-//     }
-//   };
-
-//   return (
-//     <div className="w-[90%] xl:w-2/3 m-auto grid xl:grid-cols-4  xl:my-16">
-//       <div className="relative mt-11">
-//         <h1 className="text-3xl lg:text-5xl lg:mb-11 xl:text-8xl xl:[writing-mode:vertical-lr] xl:rotate-180 xl:absolute top-32">
-//           {" "}
-//           News & Insights{" "}
-//         </h1>
-//       </div>
-//       <div className="flex flex-col col-span-3 ">
-//         {posts.slice(0, 3).map((post) => (
-//           <div
-//             className="w-full flex flex-col gap-5 lg:flex-row my-5 "
-//             key={post.uri}>
-//             <Link
-//               href={post.uri}
-//               className="h-48 md:h-80 lg:h-[25rem]  lg:w-[25rem] overflow-hidden">
-//               <Image
-//                 key={post.uri}
-//                 src={post.featuredImage?.node.sourceUrl}
-//                 width={500}
-//                 height={500}
-//                 className=" h-full w-full object-cover hover:scale-[105%] duration-300 "
-//               />
-//             </Link>
-//             <div className="lg:w-1/2 xl:w-2/4  flex flex-col justify-between">
-//               <h1 className="bg-[#D9D9D9] hidden lg:flex px-5 lg:py-2 w-fit tracking-[.2rem]">
-//                 BLOG
-//               </h1>
-//               <span className="flex lg:hidden font-light text-sm">
-//                 <Date dateString={post.date}></Date>
-//               </span>
-//               <Link href={post.uri} key={post.uri}>
-//                 <h1 className="font-bold text-xl 2xl:text-3xl uppercase my-3 lg:my-6">
-//                   {post.title}
-//                 </h1>
-//               </Link>
-//               <article
-//                 className="text-royal font-light xl:text-md mb-5"
-//                 dangerouslySetInnerHTML={{
-//                   __html: truncateExcerpt(post.excerpt, 150),
-//                 }}></article>
-
-//               <span className="hidden lg:flex">
-//                 <Date className="" dateString={post.date}></Date>
-//               </span>
-//               <Link href={post.uri}  className="relative overflow-hidden group bg-primary rounded-full text-white  px-11 py-3 w-fit mt-11 flex items-center transition-colors duration-300 ease-out">
-//                  <span className="mr-3 z-30">{paper}</span> <h3 className="z-30 group-hover:tracking-wide duration-300 ">Read The Article</h3>
-                                
-//                  <span className=" absolute bg-accent left-1/2 -translate-x-1/2 w-16 h-16 rounded-full -bottom-16 group-hover:h-48 group-hover:w-80 group:hover:left-0                transition-all duration-300 z-20"></span>
-//               </Link>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-export default function BlogSection (){
-  return(
-    <div>asd</div>
-  )
-}
