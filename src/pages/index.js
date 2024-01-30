@@ -44,46 +44,46 @@ export default function Home({ posts }) {
       <FourthSection />
       <FifthSection />
       <SixthSection />
-      {/* <BlogSection posts={posts} /> */}
+      <BlogSection posts={posts} />
     </main>
    </>
   );
 }
-// export async function getStaticProps() {
-//   const GET_POSTS = gql`
-//     query GetAllPosts {
-//       posts {
-//         nodes {
-//           slug
-//           title
-//           uri
-//           postId
-//           date
-//           content
-//           excerpt
-//           featuredImage {
-//             node {
-//               id
-//               sourceUrl
-//             }
-//           }
-//           author {
-//             node {
-//               name
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `;
-//   const response = await client.query({
-//     query: GET_POSTS,
-//   });
-//   const posts = response?.data?.posts?.nodes;
-//   return {
-//     props: {
-//       posts,
-//     },
-//     revalidate: 10,
-//   };
-// }
+export async function getStaticProps() {
+  const GET_POSTS = gql`
+    query GetAllPosts {
+      posts {
+        nodes {
+          slug
+          title
+          uri
+          postId
+          date
+          content
+          excerpt
+          featuredImage {
+            node {
+              id
+              sourceUrl
+            }
+          }
+          author {
+            node {
+              name
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await client.query({
+    query: GET_POSTS,
+  });
+  const posts = response?.data?.posts?.nodes;
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  };
+}
