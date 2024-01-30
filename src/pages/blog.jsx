@@ -99,7 +99,7 @@ export default function Blog({ posts }) {
           <span className="hidden lg:block absolute h-full w-[1px] bg-primary/30 left-1/2 top-0"></span>
 
           <div className="grid lg:grid-cols-2 gap-5  xl:w-10/12 m-auto xl:px-[2.5rem]  ">
-            {posts.map((post, index) => (
+            {posts.map((post) => (
               <div
                 key={post.uri}
                 className=" max-w-[80rem] w-[90%] m-auto mt-0 flex flex-col  border-b-[1px] mb-3 pb-11 border-primary/30">

@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
   
-    <ApolloProvider client={client}>
+    <ApolloProvider client={client} >
       <main className={industryFont.className}>
         <Menu handleMenus={handleActive} />
         {/* <Submenu /> */}
