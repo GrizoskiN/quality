@@ -54,7 +54,7 @@ const Menu = (props) => {
       className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage  ? "bg-transparent text-white" : ""}  ${ uri ? "text-white" : ""} border-gray-300 duration-300 ease-in-out`} >
       <div className="hidden lg:flex lg:w-10/12 xl:w-2/3 m-auto justify-evenly items-center grow text-sm font-thin mb-3  ">
         <div className="flex justify-evenly w-2/4">
-          <Link href="/">BLOG</Link>
+          <Link href="/blog">BLOG</Link>
           <Link href="/contact">CONTACT</Link>
           {/* <Link href="#">LOCATIONS</Link>
         <Link href="#">CERTIFICATES</Link> */}

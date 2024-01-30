@@ -74,6 +74,7 @@ const paper =
     fill="white"
   />
 </svg>
+
 export default function BlogSection({ posts }) {
   const truncateExcerpt = (excerpt, maxLength) => {
     if (excerpt.length <= maxLength) {
