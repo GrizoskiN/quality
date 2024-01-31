@@ -17,11 +17,11 @@ const About = () => {
       <div className="flex lg:flex-row flex-col justify-between lg:items-end">
         <div className="">
           <h4 className="text-[#777777]">WHO WE ARE</h4>
-          <h1 className="text-5xl md:text-6xl xl:text-8xl font-bold">We set out to create a <span className="text-primary">better way to build</span></h1>
+          <h1 className="text-5xl md:text-6xl xl:text-8xl font-bold">We set out to create a  <span className="text-primary">better way to collaborate</span></h1>
         </div>
-        <div className="lg:w-2/5 mt-7 lg:mt-0">
+        {/* <div className="lg:w-2/5 mt-7 lg:mt-0">
           <p className="text-md xl:text-xl">Together, the investors and partners are creating the best and most econimical solutions for your business!</p>
-        </div>
+        </div> */}
         </div>
       </div>
 
@@ -39,18 +39,19 @@ const About = () => {
       </div>
 
       <div className="lg:w-1/3 ml-auto text-lg">
-        <h3 className="font-semibold">Our Founder, Bojan started this company because he wanted to make it easier for companies to invest more in real estate.</h3>
+        {/* <h3 className="font-semibold">Our Founder, started this company because he wanted to make it easier for companies to invest more in real estate.</h3> */}
         <p className="mt-11">We are a team of experienced estimators overseen by a General Contractor who specialize in providing accurate and reliable cost estimates for construction projects of all sizes and types. Our goal is to help contractors, developers, and owners plan and budget for their projects with confidence.</p>
         <p className="mt-6">
         We pride ourselves on our attention to detail and thoroughness. Our estimators use the latest software and techniques to ensure that our estimates are as           accurate as possible. While we have a deep understanding of construction materials and labor costs, we have significant insight into unforeseen and site specific           costs that other estimators do not.</p>
 
-        <div className="mt-11 flex items-center">
+        {/* <div className="mt-11 flex items-center">
           <Image src={Bo}/>
           <div className="ml-7">
           <h1 className="font-semibold text-2xl">Bojan Petreski</h1>
           <h5 className="font-light text-[#777777] text-sm">Founder & CEO</h5>
           </div>
-        </div>
+        </div> */}
+
       </div>
       
     </div>
