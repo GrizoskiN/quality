@@ -29,14 +29,13 @@ const Contact = () => {
         </section>
   <div className="flex flex-col lg:flex-row m-auto w-10/12 lg:w-2/3">
   <div className="lg:w-1/2 lg:ml-auto flex flex-col lg:items-start text-left md:text-center">
-        <h2 className="text-3xl font-bold mb-4">Our Location</h2>
+        <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
         
           <div className="flex flex-col items-start">
-            <h3 className=" lg:text-xl font-semibold">Acme Construction</h3>
-           <div className="md:flex items-start justify-between mt-5 lg:flex-col">
-           <p>123 Main St, Anytown, USA</p>
-            <p>(123) 456-7890</p>
-            <p>info@acmeconstruction.com</p>
+            <h3 className=" lg:text-xl font-semibold">Quality Estimation LLC</h3>
+           <div className="md:flex items-start justify-between mt-3 lg:flex-col">
+            <p>‪(619) 289-7059‬</p>
+            <p>info@qualityestimation.us</p>
            </div>
           </div>
         
