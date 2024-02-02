@@ -5,7 +5,7 @@ import house2 from "../../../public/img/house2.png";
 import hvac from "../../../public/img/hvac.png";
 import hvac2 from "../../../public/img/hvac2.png";
 import cost from "../../../public/img/cost.png";
-import cost2 from "../../../public/img/cost2.png";
+import cost2 from "../../../public/img/cost2.webp";
 import repair2 from "../../../public/img/repair2.png";
 import repair from "../../../public/img/repair.png";
 
@@ -85,7 +85,7 @@ const ThirdSection = () => {
                     {service.text1}
                   </p>
                 </div>
-                <div className="group-hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 absolute w-full h-full top-0 left-0 transition-all duration-300 object-cover z-10 "></div>
+                <div className="group-hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 absolute w-full h-full top-0 left-0 transition-color duration-300 object-cover z-10 "></div>
                 <Image
                   src={service.image2}
                   width={1400}

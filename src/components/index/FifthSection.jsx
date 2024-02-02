@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import comm from "../../../public/img/commercial.png";
-import comm2 from "../../../public/img/cost2.png";
+import comm from "../../../public/img/commercial.webp";
+import comm2 from "../../../public/img/cost2.webp";
 const FifthSection = () => {
   const clients = [
     { id: 0, name: "⭐ General Contractors", image: comm },
@@ -19,14 +19,19 @@ const FifthSection = () => {
   };
   return (
     <div className="w-[90%] lg:w-2/3 m-auto my-16 xl:my-32">
-      <h1 className="text-6xl md:text-5xl xl:text-9xl font-bold mb-6">Our clients</h1>
+      <h1 className="text-6xl md:text-5xl xl:text-9xl font-bold mb-6">
+        Our clients
+      </h1>
 
       <div className="flex  m-auto justify-between items-center">
         <div className="w-full">
           {clients.map(({ id, name }) => (
-            <ul key={id} className="flex items-center transition-all duration-300 hover:duration-500">
-              {select ===id && <span className=" ">
-                {/* <svg className={`${select === id ? "opacity-100" : "opacity-0"} hidden  lg:w-7 transition-all duration-300`}
+            <ul
+              key={id}
+              className="flex items-center transition-all duration-300 hover:duration-500">
+              {select === id && (
+                <span className=" ">
+                  {/* <svg className={`${select === id ? "opacity-100" : "opacity-0"} hidden  lg:w-7 transition-all duration-300`}
                   width="68"
                   height="68"
                   viewBox="0 0 98 98"
@@ -38,7 +43,8 @@ const FifthSection = () => {
                     fill="#1F2A46"
                   />
                 </svg> */}
-              </span>}
+                </span>
+              )}
               <li
                 onMouseOver={() => handleClick(id)}
                 className=" text-xl xl:text-5xl  my-2 xl:my-5 cursor-pointer transition-transform duration-300 hover:lg:ml-5">
@@ -49,16 +55,14 @@ const FifthSection = () => {
         </div>
         <div className="hidden md:h-[20rem] xl:h-[45rem] relative md:flex justify-center items-center w-full ">
           {clients.map(({ id, image }) => (
-            
-             
-                <Image
-                  key={id}
-                  src={image}
-                  width={500}
-                  className={`${select == id ? 'opacity-100' : 'opacity-0'} object-contain absolute max-w-full max-h-full left-1/2 top-1/2 -translate-y-1/2  -translate-x-1/2 transition-all duration-300`}
-                />
-           
-            
+            <Image
+              key={id}
+              src={image}
+              width={500}
+              className={`${
+                select == id ? "opacity-100" : "opacity-0"
+              } object-contain absolute max-w-full max-h-full left-1/2 top-1/2 -translate-y-1/2  -translate-x-1/2 transition-all duration-300`}
+            />
           ))}
         </div>
       </div>

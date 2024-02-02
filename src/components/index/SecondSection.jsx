@@ -1,8 +1,8 @@
 import Image from "next/image";
-import bluebeam from "../../../public/img/bluebeam.jpg";
-import center from "../../../public/img/center.jpg";
-import planswift from "../../../public/img/planswift.jpg";
-import secondsection from "../../../public/img/secondsection.jpg";
+import bluebeam from "../../../public/img/bluebeam.webp";
+import center from "../../../public/img/center.webp";
+import planswift from "../../../public/img/planswift.webp";
+import secondsection from "../../../public/img/secondsection.webp";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeaderImage from "/public/img/header.jpg";
+import HeaderImage from "/public/img/header.webp";
 import Link from "next/link";
 
 
