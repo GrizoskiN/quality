@@ -2,7 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const FirstSection = () => {
   return (
-    <div className="py-16 mt-16 bg-[#0A0B0F] text-white">
+    <div className="py-16 lg:mt-6 bg-[#0A0B0F] text-white">
       <div className="w-[90%] xl:w-2/3 m-auto mb-16">
       <h1 className=" text-2xl xl:text-5xl mb-6 ">
         Delivering a{" "}

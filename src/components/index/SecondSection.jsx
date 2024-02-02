@@ -11,30 +11,51 @@ const SecondSection = () => {
     {
       id: 0,
       name: "Step 1",
-      text1: `At Quality Estimation, we understand that every project begins with a solid foundation – a foundation built on accurate estimates. Our mission is to empower project managers and contractors with the financial insights they need to make informed decisions. With our expertise, your projects gain a competitive edge from the very start.`,
+      text1: `Gather Project Information`,
       text2:
-        "Estimates serve as the compass guiding your journey through a project's financial landscape. They're not just numbers; they're the keys to unlocking success. Quality Estimation is your compass, revealing the true potential of your projects. Our professional team meticulously analyzes every detail, translating complexity into clarity.",
+        "Upon reaching out to us, we gather the required information his includes the scope of work you need, the project location, any special considerations or challenges that are required for the successful execution of the project.",
     },
     {
       id: 1,
       name: "Step 2",
-      text1: `At Quality Estimation, we understand that every project begins with a solid foundation – a foundation built on accurate estimates. Our mission is to empower project managers and contractors with the financial insights they need to make informed decisions. With our expertise, your projects gain a competitive edge from the very start.`,
+      text1: `Cost of Service`,
       text2:
-        "Estimates serve as the compass guiding your journey through a project's financial landscape. They're not just numbers; they're the keys to unlocking success. Quality Estimation is your compass, revealing the true potential of your projects. Our professional team meticulously analyzes every detail, translating complexity into clarity.",
+        "Provide a cost breakdown for your estimate/service with clear deadlines and costs, no hidden fees.",
     },
     {
       id: 2,
       name: "Step 3",
-      text1: `At Quality Estimation, we understand that every project begins with a solid foundation – a foundation built on accurate estimates. Our mission is to empower project managers and contractors with the financial insights they need to make informed decisions. With our expertise, your projects gain a competitive edge from the very start.`,
+      text1: `Confirmation and Start of Service`,
       text2:
-        "Estimates serve as the compass guiding your journey through a project's financial landscape. They're not just numbers; they're the keys to unlocking success. Quality Estimation is your compass, revealing the true potential of your projects. Our professional team meticulously analyzes every detail, translating complexity into clarity.",
+        "Upon agreement and deposit receipt, you will receive a confirmation from our team that your estimate is being worked on. Any follow-up questions will take place after this phase.",
     },
     {
       id: 3,
       name: "Step 4",
-      text1: `At Quality Estimation, we understand that every project begins with a solid foundation – a foundation built on accurate estimates. Our mission is to empower project managers and contractors with the financial insights they need to make informed decisions. With our expertise, your projects gain a competitive edge from the very start.`,
+      text1: `Labor/Material Cost`,
       text2:
-        "Estimates serve as the compass guiding your journey through a project's financial landscape. They're not just numbers; they're the keys to unlocking success. Quality Estimation is your compass, revealing the true potential of your projects. Our professional team meticulously analyzes every detail, translating complexity into clarity.",
+        "Estimate the cost of each task by CSI/MasterFormat Division unless otherwise specified. Each task of the project will have labor and/or material assigned to it as a cost factor based on our cost database that is updated quarterly.",
+    },
+    {
+      id: 4,
+      name: "Step 5",
+      text1: `General Conditions`,
+      text2:
+        "Add contingencies, equipment and other general conditions. Only having the labor and material costs of a project is a half-way done estimate, it is crucial to account for costs that every company carries. ",
+    },
+    {
+      id: 5,
+      name: "Step 6",
+      text1: `Final Quality Control Check`,
+      text2:
+        "Before the estimate is delivered our executive team reviews everything, adjusts or checks in with the   estimating team for any follow up questions/clarifications.",
+    },
+    {
+      id: 6,
+      name: "Step 7",
+      text1: `Delivery of Estimate`,
+      text2:
+        "Delivering the estimate on/before the deadline you need it by is our guarantee or you get a free estimate. Additionally, any questions, concerns or comments you have will be addressed immediately.",
     },
   ];
   const [width, setWidth] = useState(null);
@@ -74,12 +95,12 @@ const SecondSection = () => {
           {services.map((service, id) => (
             <li
               key={id}
-              className="cursor-pointer w-96 lg:w-[60rem] h-auto lg:h-[30rem] bg-royal/70 lg:hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-center px-5 py-10 lg:p-10 relative overflow-hidden group transition duration-700 ease-in-out">
-              <div>
-                <h1 className="text-white text-2xl  xl:text-4xl absolute top-3 left-5 font-semibold lg:group-hover:text-opacity-10 lg:group-hover:text-[9rem] transition-all duration-300">
+              className="cursor-pointer w-96 lg:w-[30rem] h-auto  bg-royal/70 lg:hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm  px-5  relative overflow-hidden group transition duration-700 ease-in-out">
+              <div className="w-[90%] m-auto py-10 "> 
+                <h1 className="text-white text-2xl  xl:text-4xl absolute top-5 left-13 font-semibold lg:group-hover:text-opacity-10 lg:group-hover:text-[3rem] transition-all duration-300">
                   {service.name}
                 </h1>
-                <p className="text-white font-light mt-5 lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                <p className="text-gray-100 font-bold mt-9 lg:text-[1.5rem]   group-hover:opacity-100  transition-all duration-300 ease-in-out">
                   {service.text1}
                 </p>
                 <p className="text-white mt-3 font-light lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
@@ -94,10 +115,9 @@ const SecondSection = () => {
 
       <div>
         <Marquee autoFill className="my-32">
-            <Image className="mx-4" src={bluebeam}  width={150}/>
-            <Image className="mx-4" src={center} width={150} />
-            <Image className="mx-4" src={planswift} width={150} />
-
+          <Image className="mx-4" src={bluebeam} width={150} />
+          <Image className="mx-4" src={center} width={150} />
+          <Image className="mx-4" src={planswift} width={150} />
         </Marquee>
       </div>
       <Image

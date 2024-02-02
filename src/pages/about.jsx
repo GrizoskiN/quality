@@ -58,15 +58,15 @@ const About = () => {
     <div className="bg-[#F9F9F9] -mb-32">
        <div className="w-10/12 lg:w-2/3 m-auto py-32">
        <div className="flex flex-col lg:flex-row justify-between items-center mb-11">
-          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">$5b+</h1>
-          <p className="lg:w-1/3">We are a team of experienced estimators overseen by a General Contractor who specialize in providing accurate and reliable cost estimates for construction projects of </p>
+          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">$2.2b</h1>
+          <p className="lg:w-1/3">Over $2 billion worth of estimates have been processed by our experienced estimating team. Volume speaks for itself, and we have you covered.</p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center py-11 border-y-[1px]">
-          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">$350m +</h1>
-          <p className="lg:w-1/3">We are a team of experienced estimators overseen by a General Contractor who specialize in providing accurate and reliable cost estimates for construction projects of </p>
+          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">12-20%</h1>
+          <p className="lg:w-1/3">The conversion rate of our estimates beats the industry standard of 8-10% because of our expertise and experience.</p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center mt-11">
-          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">7-12%</h1>
+          <h1 className="font-bold text-7xl mb-7 lg:mb-0 xl:text-9xl lg:w-2/3">$380m +</h1>
           <p className="lg:w-1/3">We are a team of experienced estimators overseen by a General Contractor who specialize in providing accurate and reliable cost estimates for construction projects of </p>
         </div>
        </div>
