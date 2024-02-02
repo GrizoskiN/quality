@@ -4,12 +4,12 @@ import comm from "../../../public/img/commercial.png";
 import comm2 from "../../../public/img/cost2.png";
 const FifthSection = () => {
   const clients = [
-    { id: 0, name: "General Contractors", image: comm },
-    { id: 1, name: "Specialty Contractors", image: comm2 },
-    { id: 2, name: "MEP Contractors", image: comm },
-    { id: 3, name: "Architects", image: comm },
-    { id: 4, name: "Developers", image: comm },
-    { id: 5, name: "Builders", image: comm },
+    { id: 0, name: "⭐ General Contractors", image: comm },
+    { id: 1, name: "⭐ Specialty Contractors", image: comm2 },
+    { id: 2, name: "⭐ MEP Contractors", image: comm },
+    { id: 3, name: "⭐ Architects", image: comm },
+    { id: 4, name: "⭐ Developers", image: comm },
+    { id: 5, name: "⭐ Builders", image: comm },
   ];
 
   const [select, setSelect] = useState("");
@@ -19,14 +19,14 @@ const FifthSection = () => {
   };
   return (
     <div className="w-[90%] lg:w-2/3 m-auto my-16 xl:my-32">
-      <h1 className="text-3xl md:text-5xl xl:text-9xl font-bold">Our clients</h1>
+      <h1 className="text-6xl md:text-5xl xl:text-9xl font-bold mb-6">Our clients</h1>
 
       <div className="flex  m-auto justify-between items-center">
         <div className="w-full">
           {clients.map(({ id, name }) => (
             <ul key={id} className="flex items-center transition-all duration-300 hover:duration-500">
-              {select ===id && <span className="lg:mr-5 ">
-                <svg className={`${select === id ? "opacity-100" : "opacity-0"} hidden lg:block lg:w-7 transition-all duration-300`}
+              {select ===id && <span className=" ">
+                {/* <svg className={`${select === id ? "opacity-100" : "opacity-0"} hidden  lg:w-7 transition-all duration-300`}
                   width="68"
                   height="68"
                   viewBox="0 0 98 98"
@@ -37,11 +37,11 @@ const FifthSection = () => {
                     d="M64.9145 51.0667C63.3121 49.1551 61.6395 46.3862 59.8965 42.7598H62.9326C66.5028 46.9765 70.2978 50.0969 74.3178 52.1209V53.6389C70.2978 55.663 66.5028 58.7834 62.9326 63.0001H59.8965C61.6395 59.3737 63.3121 56.6047 64.9145 54.6931H23.2109V51.0667H64.9145Z"
                     fill="#1F2A46"
                   />
-                </svg>
+                </svg> */}
               </span>}
               <li
                 onMouseOver={() => handleClick(id)}
-                className=" text-xl xl:text-5xl  my-2 xl:my-5 cursor-pointer transition-all duration-300">
+                className=" text-xl xl:text-5xl  my-2 xl:my-5 cursor-pointer transition-transform duration-300 hover:lg:ml-5">
                 {name}
               </li>
             </ul>

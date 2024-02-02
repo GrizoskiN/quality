@@ -2,7 +2,7 @@ import Image from "next/image";
 import call from "../../../public/img/call.jpg"
 const FourthSection = () => {
   return (
-    <div className="relative text-white flex flex-col items-center justify-center text-center py-11 lg:py-32 my-32">
+    <div className="relative text-white flex flex-col items-center justify-center text-center py-11 lg:py-32 my-16">
       <div className="">
         <h1 className="font-bold text-3xl xl:text-5xl ">CALL US NOW AND STAY HASSLE-FREE!</h1>
         <p className="font-light  lg:text-xl my-4">

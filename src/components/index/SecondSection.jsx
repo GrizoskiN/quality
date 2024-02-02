@@ -100,10 +100,10 @@ const SecondSection = () => {
                 <h1 className="text-white text-2xl  xl:text-4xl absolute top-5 left-13 font-semibold lg:group-hover:text-opacity-10 lg:group-hover:text-[3rem] transition-all duration-300">
                   {service.name}
                 </h1>
-                <p className="text-gray-100 font-bold mt-9 lg:text-[1.5rem]   group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                <p className="text-gray-100 font-bold mt-9 text-2xl lg:text-[1.5rem]   group-hover:opacity-100  transition-all duration-300 ease-in-out">
                   {service.text1}
                 </p>
-                <p className="text-white mt-3 font-light lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                <p className="text-white mt-3 font-light text-lg leading-[2rem] lg:text-[1.2em] opacity-50  group-hover:opacity-100  transition-all duration-300 ease-in-out">
                   {service.text2}
                 </p>
               </div>
@@ -114,7 +114,7 @@ const SecondSection = () => {
       </div>
 
       <div>
-        <Marquee autoFill className="my-32">
+        <Marquee autoFill className="my-16 lg:my-32">
           <Image className="mx-4" src={bluebeam} width={150} />
           <Image className="mx-4" src={center} width={150} />
           <Image className="mx-4" src={planswift} width={150} />

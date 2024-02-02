@@ -67,21 +67,21 @@ const ThirdSection = () => {
         </Marquee>
       </div>
       <div>
-        <div ref={menuRef} className="flex overflow-x-hidden ">
+        <div ref={menuRef} className="flex overflow-x-hidden mt-16">
           <motion.ul
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
             className="flex gap-5 ">
             {services.map((service, id) => (
-              <li
+              <motion.li
                 key={id}
-                className="cursor-pointer w-64 lg:w-[23rem] xl:w-[33rem] h-64 lg:h-[23rem] xl:h-[35rem] bg-royal/70 hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-start p-5 lg:p-10 relative z-20  overflow-hidden group transition duration-700 ease-in-out">
+                className="cursor-pointer w-64 lg:w-[23rem] xl:w-[33rem] h-80 lg:h-[23rem] xl:h-[35rem] bg-royal/70 hover:bg-gradient-to-r from-[#071230]/70 to-[#50659C]/70 rounded-sm flex items-start p-5 lg:p-10 relative z-20  overflow-hidden group transition duration-700 ease-in-out">
                 <div className="lg:mt-16 xl:mt-32  z-20 group-hover:bg-opacity-50 ">
                   <Image
                     src={service.image}
                     className="text-white text-4xl bg-black/10 font-semibold  transition-all duration-300"
                   />
-                  <p className="text-white font-light lg:text-2xl opacity-50 mt-5 group-hover:opacity-100  transition-all duration-300 ease-in-out">
+                  <p className="text-white font-light text-2xl opacity-50 mt-5 group-hover:opacity-100  transition-all duration-300 ease-in-out">
                     {service.text1}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ const ThirdSection = () => {
                   className="absolute w-full h-full top-0 left-0 object-cover -z-0 "
                 />
                 <div className="absolute top-0 right-0 w-full "></div>
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         </div>
