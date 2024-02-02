@@ -3,8 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const FirstSection = () => {
   return (
     <div className="py-16 lg:mt-6 bg-[#0A0B0F] text-white">
-      <div className="w-[90%] xl:w-2/3 m-auto mb-16">
-      <h1 className=" text-2xl xl:text-5xl mb-6 ">
+      <div className="w-[90%] xl:w-2/3 m-auto mb-8 lg:my-16">
+      <h1 className=" text-2xl md:text-4xl xl:text-5xl mb-6 ">
         Delivering a{" "}
         <span className="text-yellow">premium estimation quality</span> on every
         project we build.
