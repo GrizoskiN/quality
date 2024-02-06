@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Head from "next/head";
 
 const accurate = (
   <svg
@@ -120,6 +121,26 @@ const technology = (
 
 const Expertise = () => {
   return (
+    <>
+    <Head>
+    <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
+     <title>Quality Estimation | Expertise</title>
+     <meta
+           content='Quality Estimation is a estimation and development company from San Diego,
+           California that specializes in creating the fastest project estimations. Contact us today for a free consultation!'
+           name='description'
+           key='desc'
+         />
+         <meta
+           property='og:title'
+           content='Quality Estimation company, San Diego, USA'
+         />
+         <meta property='og:image' content='/img/logo.png' />
+         <meta
+           name='keywords'
+           content='Quality Estimation company, San Diego, USA, estimation, estimations, building projects'
+         />
+    </Head>
     <div>
       <h1 className="w-10/12 lg:w-2/3 m-auto mt-16 lg:mt-48 text-2xl lg:text-5xl">
         Welcome to Quality Estimations,{" "}
@@ -360,7 +381,7 @@ const Expertise = () => {
         in achieving and maintaining the highest standards of quality.
       </h1>
     </div>
-    
+    </>
   );
 };
 

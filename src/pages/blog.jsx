@@ -93,6 +93,25 @@
    };
    return (
      <>
+       <Head>
+   <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
+    <title>Quality Estimation | Blog</title>
+    <meta
+          content='Quality Estimation is a estimation and development company from San Diego,
+          California that specializes in creating the fastest project estimations. Contact us today for a free consultation!'
+          name='description'
+          key='desc'
+        />
+        <meta
+          property='og:title'
+          content='Quality Estimation company, San Diego, USA'
+        />
+        <meta property='og:image' content='/img/logo.png' />
+        <meta
+          name='keywords'
+          content='Quality Estimation company, San Diego, USA, estimation, estimations, building projects'
+        />
+   </Head>
        <main className="w-full m-auto  bg-gray-100 relative ">
          <div className="mb-8  m-auto text-center py-24 lg:pt-48  lg:pb-32">
            <h1 className="text-9xl md:text-[10rem] xl:text-[15rem] text-royal xl:leading-[15rem]">BLOG</h1>

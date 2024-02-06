@@ -2,7 +2,7 @@ import Image from "next/image"
 import About1 from "../../public/img/about1.webp"
 import About2 from "../../public/img/about2.webp"
 import Bo from "../../public/img/bo.png"
-
+import Head from "next/head";
 
 const downArrow = <svg className="w-11 h-11" width="60" height="60" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M79.3481 82.2595C78.6019 82.2595 77.8557 81.9774 77.287 81.4086L9.5875 13.7092C8.45 12.5717 8.45 10.7289 9.5875 9.59141C10.725 8.45391 12.5678 8.45391 13.7053 9.59141L81.4047 77.2909C82.5422 78.4284 82.5422 80.2711 81.4047 81.4086C80.8405 81.9774 80.0943 82.2595 79.3481 82.2595Z" fill="black"/>
@@ -12,6 +12,25 @@ const downArrow = <svg className="w-11 h-11" width="60" height="60" viewBox="0 0
 const About = () => {
   return (
     <>
+      <Head>
+   <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
+    <title>Quality Estimation | About Us</title>
+    <meta
+          content='Quality Estimation is a estimation and development company from San Diego,
+          California that specializes in creating the fastest project estimations. Contact us today for a free consultation!'
+          name='description'
+          key='desc'
+        />
+        <meta
+          property='og:title'
+          content='Quality Estimation company, San Diego, USA'
+        />
+        <meta property='og:image' content='/img/logo.png' />
+        <meta
+          name='keywords'
+          content='Quality Estimation company, San Diego, USA, estimation, estimations, building projects'
+        />
+   </Head>
     <div className="pt-32 pb-16 lg:py-48  w-10/12 xl:w-2/3 m-auto">
 
       <div className="flex lg:flex-row flex-col justify-between lg:items-end">

@@ -8,7 +8,7 @@ const Menu = (props) => {
   const router = useRouter();
 
   const homePage = router.pathname === "/";
-
+  const career = router.pathname === "/careers"
   const {uri} = router.query;
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false);
@@ -51,11 +51,11 @@ const Menu = (props) => {
     <>
     
     <div
-      className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage  ? "bg-transparent text-white" : ""}  ${ uri ? "text-white" : ""} border-gray-300 duration-300 ease-in-out`} >
+      className={`w-full absolute top-0 lg:border-b-[1px] pt-5  z-50   ${homePage | career  ? "bg-transparent text-white" : ""}  ${ uri ? "text-white" : ""} border-gray-300 duration-300 ease-in-out`} >
       <div className="hidden lg:flex lg:w-10/12 xl:w-2/3 m-auto justify-evenly items-center grow text-sm font-thin mb-3  ">
         <div className="flex justify-evenly w-2/4">
           <Link href="/blog">BLOG</Link>
-          <Link href="/contact">CONTACT</Link>
+          <Link href="/careers">CAREERS</Link>
           {/* <Link href="#">LOCATIONS</Link>
         <Link href="#">CERTIFICATES</Link> */}
         </div>
@@ -66,15 +66,15 @@ const Menu = (props) => {
         </div>
         <div className="flex justify-evenly w-2/4 items-center">
           <Link href="/">SUBCONTRACTORS</Link>
-          <Link href="/careers" className="bg-primary px-5 py-2 text-white">
-            CAREERS
+          <Link href="/contact" className="bg-primary px-5 py-2 text-white">
+           CONTACT
           </Link>
         </div>
       </div>
     <div className={`  border-t-[1px] hidden lg:flex w-full m-auto justify-center items-center grow text-sm font-thin py-3   border-gray-400 z-20 relative`}>
       <Link href="/expertise" className="mx-3">EXPERTISE</Link>
-      <Link href="/projects" className="mx-3">PROJECTS</Link>
-      <Link href="/experience" className="mx-3">OUR EXPERIENCE</Link>
+      <Link href="/" className="mx-3">PROJECTS</Link>
+      {/* <Link href="/experience" className="mx-3">OUR EXPERIENCE</Link> */}
       {/* <Link href="#" className="mx-3">OUR TEAM</Link> */}
       <Link href="/about" className="mx-3">ABOUT US</Link>
     </div>
