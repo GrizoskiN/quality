@@ -19,6 +19,7 @@ export default function Home({ posts }) {
   return (
    <>
    <Head>
+   <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
     <title>Quality Estimation</title>
     <meta
           content='Quality Estimation is a estimation and development company from San Diego,
