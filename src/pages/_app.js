@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import "@/styles/globals.css";
+import Script from "next/script";
 
 export const industryFont = localFont({
   src: [
@@ -32,7 +33,16 @@ export default function App({ Component, pageProps }) {
 
   const router = useRouter();
   return (
-  
+  <>
+     <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-XHTYEDSRH5');
+        `}
+      </Script> 
     <ApolloProvider client={client} >
       <main className={industryFont.className}>
         <Menu handleMenus={handleActive} />
@@ -66,7 +76,7 @@ export default function App({ Component, pageProps }) {
         <Footer />
       </main>
     </ApolloProvider>
-  
+    </>
 
   );
 }
