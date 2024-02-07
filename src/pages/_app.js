@@ -43,6 +43,7 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-XHTYEDSRH5');
         `}
       </Script> 
+  
     <ApolloProvider client={client} >
       <main className={industryFont.className}>
         <Menu handleMenus={handleActive} />
