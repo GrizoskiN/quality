@@ -75,21 +75,7 @@ const paper =
     fill="white"
   />
 </svg>
-export async function generateMetadata({ params }, parent) {
-  // Read route params
-  const id = params.id;
 
-  // Fetch data or do any other necessary operations based on the route params
-  const product = await fetch(`https://blog.gobro.studio/${id}`).then((res) => res.json());
-
-  // Optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || [];
-
-  return {
-    title: product.title,
-    
-  };
-}
 
 
 export default function PostSlug({ post, relatedPosts }) {
@@ -106,7 +92,7 @@ export default function PostSlug({ post, relatedPosts }) {
      
         <div className="absolute bg-royal/50 inset-0 w-full h-full z-20"></div>
         <Image
-          key={post.uri}
+          
           src={post.featuredImage?.node.sourceUrl}
           width={1500}
           height={500}
@@ -128,7 +114,7 @@ export default function PostSlug({ post, relatedPosts }) {
 
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10 ">
      <FacebookShareButton
-        url={`https://quality-ruby.vercel.app/${post.uri}`}
+        url={`https://qualityestimation.us/${post.uri}`}
         quote={post.title}
         hashtag={"#QualityEstimation"} className="w-32"
         media={post.image}
@@ -145,7 +131,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   xl:border-y-[1px] py-2 xl:pl-10 xl:border-primary/30 gap-5">
      <TwitterShareButton
       
-      url={`https://quality-ruby.vercel.app/${post.uri}`}
+      url={`https://qualityestimation.us/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32"
       media={post.image}
@@ -160,7 +146,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10">
      <LinkedinShareButton
       
-      url={`https://quality-ruby.vercel.app/${post.uri}`}
+      url={`https://qualityestimation.us/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32 flex"
       media={post.image}
