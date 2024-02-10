@@ -88,7 +88,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: product.title,
     openGraph: {
-      images: ['/public/img/header.web', ...previousImages],
+      images: [imga, ...previousImages],
     },
   };
 }
@@ -130,7 +130,7 @@ export default function PostSlug({ post, relatedPosts }) {
 
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10 ">
      <FacebookShareButton
-        url={`https://qualityesimation.us/${post.uri}`}
+        url={`https://quality-ruby.vercel.app/${post.uri}`}
         quote={post.title}
         hashtag={"#QualityEstimation"} className="w-32"
         media={post.image}
@@ -147,7 +147,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   xl:border-y-[1px] py-2 xl:pl-10 xl:border-primary/30 gap-5">
      <TwitterShareButton
       
-      url={`https://qualityesimation.us/${post.uri}`}
+      url={`https://quality-ruby.vercel.app/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32"
       media={post.image}
@@ -162,7 +162,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10">
      <LinkedinShareButton
       
-      url={`https://qualityesimation.us/${post.uri}`}
+      url={`https://quality-ruby.vercel.app/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32 flex"
       media={post.image}
