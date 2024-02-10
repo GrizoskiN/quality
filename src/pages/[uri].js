@@ -211,7 +211,21 @@ export default function PostSlug({ post, relatedPosts }) {
     </>
   );
 }
+export async function generateMetadata({ params }, parent) {
+  // Read route params
+  const id = params.id;
+  console.log(id)
+  // Fetch data or do any other necessary operations based on the route params
+  const product = await fetch(`https://blog.gobro.studio/${id}`).then((res) => res.json());
 
+  // Optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: product.title,
+    
+  };
+}
 export async function getStaticProps({ params }) {
   const GET_POST_BY_URI = gql`
     query AllPosts($id: ID!) {
