@@ -6,7 +6,7 @@ import { gql } from "@apollo/client";
 import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton, LinkedinShareButton, LinkedinIcon } from "next-share";
 import Date from "@/components/date";
 import imga from "@/../public/img/header.webp"
-import { Metadata, ResolvingMetadata } from 'next'
+
 const paper = 
 <svg
   width="14"
@@ -88,7 +88,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: product.title,
     openGraph: {
-      images: [imga, ...previousImages],
+      images: ['@/../public/img/header.web', ...previousImages],
     },
   };
 }
