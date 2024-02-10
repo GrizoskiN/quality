@@ -88,7 +88,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: product.title,
     openGraph: {
-      images: ['@/../public/img/header.web', ...previousImages],
+      images: ['/public/img/header.web', ...previousImages],
     },
   };
 }
