@@ -5,7 +5,8 @@ import { client } from "@/lib/apollo";
 import { gql } from "@apollo/client";
 import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton, LinkedinShareButton, LinkedinIcon } from "next-share";
 import Date from "@/components/date";
-
+import imga from "@/../public/img/header.webp"
+import { Metadata, ResolvingMetadata } from 'next'
 const paper = 
 <svg
   width="14"
@@ -74,13 +75,31 @@ const paper =
     fill="white"
   />
 </svg>
+export async function generateMetadata({ params }, parent) {
+  // Read route params
+  const id = params.id;
+
+  // Fetch data or do any other necessary operations based on the route params
+  const product = await fetch(`https://blog.gobro.studio/${id}`).then((res) => res.json());
+
+  // Optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: product.title,
+    openGraph: {
+      images: [imga, ...previousImages],
+    },
+  };
+}
+
+
 export default function PostSlug({ post, relatedPosts }) {
   return (
     <>
       <Head>
-        <meta property='og:image' content='' />
-        <meta property='og:title' content='' />
-        <meta property='og:description' content='' />
+      <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
       </Head>
 
     <div className="font-['Open_Sans'] ">
@@ -111,7 +130,7 @@ export default function PostSlug({ post, relatedPosts }) {
 
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10 ">
      <FacebookShareButton
-        url={`https://quality-ruby.vercel.app/${post.uri}`}
+        url={`https://qualityesimation.us/${post.uri}`}
         quote={post.title}
         hashtag={"#QualityEstimation"} className="w-32"
         media={post.image}
@@ -128,7 +147,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   xl:border-y-[1px] py-2 xl:pl-10 xl:border-primary/30 gap-5">
      <TwitterShareButton
       
-      url={`https://quality-ruby.vercel.app/${post.uri}`}
+      url={`https://qualityesimation.us/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32"
       media={post.image}
@@ -143,7 +162,7 @@ export default function PostSlug({ post, relatedPosts }) {
           <div className="flex  items-center lg:w-3/4   gap-5 xl:pl-10">
      <LinkedinShareButton
       
-      url={`https://quality-ruby.vercel.app/${post.uri}`}
+      url={`https://qualityesimation.us/${post.uri}`}
       quote={post.title}
       hashtag={"#QualityEstimation"} className="w-32 flex"
       media={post.image}
