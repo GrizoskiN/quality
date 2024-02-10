@@ -12,12 +12,22 @@ import BlogSection from "@/components/index/BlogSection";
 import { client } from "@/lib/apollo";
 import { gql } from "@apollo/client";
 import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }) {
   return (
    <>
+    <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-XHTYEDSRH5');
+        `}
+      </Script> 
    <Head>
    <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
     <title>Quality Estimation</title>
