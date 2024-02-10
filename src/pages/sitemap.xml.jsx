@@ -1,4 +1,4 @@
-import { getServerSideProps } from 'next'
+
 import { generateSitemap } from 'next-sitemap'
 
 const Sitemap = () => null
