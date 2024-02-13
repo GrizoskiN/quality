@@ -5,8 +5,7 @@ const nextConfig = {
 
 
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://qualityestimation.us',
-  generateRobotsTxt: true,
+ 
   images: {
     remotePatterns: [
       {

@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
           </main>
           <motion.div
             className="slide-out"
-            initial={{ scaleY: 1 }}
+            initial={{ scaleY: 1}}
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 0 }}
             transition={{
