@@ -1,7 +1,26 @@
+import Head from "next/head"
 
 
 const Terms = () => {
   return (
+    <>
+      <meta name="google-site-verification" content="ic_oPp7RembUI_tek6mxOkhrlaG-Qg5ZLQ_o0_xO_is" />
+     <title>Quality Estimation | Terms </title>
+     <meta
+           content='Quality Estimation is a estimation and development company from San Diego,
+           California that specializes in creating the fastest project estimations. Contact us today for a free consultation!'
+           name='description'
+           key='desc'
+         />
+         <meta
+           property='og:title'
+           content='Quality Estimation company, San Diego, USA'
+         />
+         <meta property='og:image' content='/img/logo.png' />
+         <meta
+           name='keywords'
+           content='Quality Estimation company, San Diego, USA, estimation, estimations, building projects'
+         />
     <div className="w-10/12 lg:w-2/3 m-auto mt-16 lg:mt-48">
        <h2 className="uppercase text-3xl lg:text-center mb-16 lg:mb-32"><strong>Terms and Conditions</strong></h2>
 
@@ -123,6 +142,7 @@ const Terms = () => {
 
 <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
     </div>
+    </>
   )
 }
 
