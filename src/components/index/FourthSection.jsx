@@ -12,7 +12,7 @@ const FourthSection = () => {
       </div>
       <div className="mt-5 xl:mt-11">
         <h1 className="font-bold text-3xl">Call Us Now:</h1>
-        <button className="bg-gradient-to-r from-[#071230] to-[#50659C] text-xl px-11 py-2 mt-3">+1(469) 638 3584</button>
+        <button className="bg-gradient-to-r from-[#071230] to-[#50659C] text-xl px-11 py-2 mt-3">(619) 289-7059</button>
       </div>
       <Image src={call} width={2000} className="absolute w-full h-full top-0  object-cover -z-10"/>
     </div>

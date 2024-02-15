@@ -55,7 +55,7 @@ const Contact = () => {
           <div className="flex flex-col items-start">
             <h3 className=" lg:text-xl font-semibold">Quality Estimation LLC</h3>
            <div className="md:flex items-start justify-between mt-3 lg:flex-col">
-            <p>‪(619) 289-7059‬</p>
+            <p>(619) 289-7059</p>
             <p>info@qualityestimation.us</p>
            </div>
           </div>

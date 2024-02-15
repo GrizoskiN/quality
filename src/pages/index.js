@@ -54,7 +54,7 @@ export default function Home({ posts }) {
       <ThirdSection />
       <FourthSection />
       <FifthSection />
-      <SixthSection />
+      {/* <SixthSection /> */}
       <BlogSection posts={posts} />
     </main>
    </>

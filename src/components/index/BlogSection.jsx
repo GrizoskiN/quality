@@ -85,9 +85,9 @@ export default function BlogSection({ posts }) {
     }
   };
   return (
-    <div className="w-[90%] xl:w-2/3 m-auto grid xl:grid-cols-4  xl:my-16">
+    <div className="w-[90%] xl:w-full lg:px-16 xl:px-48 xl:py-32 m-auto grid xl:grid-cols-4  xl:my-16 lg:bg-gray-100">
       <div className="relative mt-11">
-        <h1 className="text-3xl lg:text-5xl lg:mb-11 xl:text-8xl xl:[writing-mode:vertical-lr] xl:rotate-180 xl:absolute top-32">
+        <h1 className="text-xl  md:text-7xl nowrap lg:mb-11 xl:text-8xl xl:[writing-mode:vertical-lr] xl:rotate-180 xl:absolute top-32">
           {" "}
           News & Insights{" "}
         </h1>

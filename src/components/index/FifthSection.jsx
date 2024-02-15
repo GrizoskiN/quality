@@ -1,15 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
 import comm from "../../../public/img/commercial.webp";
-import comm2 from "../../../public/img/cost2.webp";
+import specialty from "../../../public/img/specialty.webp";
+import general from "../../../public/img/general.webp";
+import architects from "../../../public/img/architects.webp";
+import builders from "../../../public/img/builders.webp";
+import developers from "../../../public/img/developers.webp";
 const FifthSection = () => {
   const clients = [
-    { id: 0, name: "⭐ General Contractors", image: comm },
-    { id: 1, name: "⭐ Specialty Contractors", image: comm2 },
+    { id: 0, name: "⭐ General Contractors", image: general },
+    { id: 1, name: "⭐ Specialty Contractors", image: specialty },
     { id: 2, name: "⭐ MEP Contractors", image: comm },
-    { id: 3, name: "⭐ Architects", image: comm },
-    { id: 4, name: "⭐ Developers", image: comm },
-    { id: 5, name: "⭐ Builders", image: comm },
+    { id: 3, name: "⭐ Architects", image: architects },
+    { id: 4, name: "⭐ Developers", image: developers },
+    { id: 5, name: "⭐ Builders", image: builders },
   ];
 
   const [select, setSelect] = useState("");
@@ -18,7 +22,7 @@ const FifthSection = () => {
     setSelect(id);
   };
   return (
-    <div className="w-[90%] lg:w-2/3 m-auto my-16 xl:my-32">
+    <div className="w-[90%]  xl:w-2/3 m-auto my-16 xl:my-32">
       <h1 className="text-6xl md:text-5xl xl:text-9xl font-bold mb-6">
         Our clients
       </h1>
@@ -47,13 +51,13 @@ const FifthSection = () => {
               )}
               <li
                 onMouseOver={() => handleClick(id)}
-                className=" text-xl xl:text-5xl  my-2 xl:my-5 cursor-pointer transition-transform duration-300 hover:lg:ml-5">
+                className=" text-xl lg:text-3xl xl:text-3xl 2xl:text-5xl my-2 xl:my-5 cursor-pointer transition-transform duration-300 hover:lg:ml-5">
                 {name}
               </li>
             </ul>
           ))}
         </div>
-        <div className="hidden md:h-[20rem] xl:h-[45rem] relative md:flex justify-center items-center w-full ">
+        <div className="hidden md:h-[20rem] lg:h-[30rem] xl:h-[45rem] relative md:flex justify-center items-center w-full ">
           {clients.map(({ id, image }) => (
             <Image
               key={id}

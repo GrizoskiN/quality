@@ -215,11 +215,11 @@ const Footer = () => {
           </div>
           <div className=" flex-col flex uppercase md-mt-11 lg:mt-0">
             <h1 className="lg:text-xl  mb-5">learn more</h1>
-            <Link href="/" className="text-sm font-light text-white/70">
+            <Link href="/about" className="text-sm font-light text-white/70">
               About us
             </Link>
-            <Link href="/" className="text-sm font-light text-white/70 mt-3">
-              expertise
+            <Link href="/terms" className="text-sm font-light text-white/70 mt-3">
+              Terms
             </Link>
           </div>
         </div>
