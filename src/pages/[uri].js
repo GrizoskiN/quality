@@ -5,7 +5,7 @@ import { client } from "@/lib/apollo";
 import { gql } from "@apollo/client";
 import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton, LinkedinShareButton, LinkedinIcon } from "next-share";
 import Date from "@/components/date";
-import imga from "@/../public/img/header.webp"
+
 
 const paper = 
 <svg

@@ -12,6 +12,11 @@
     <priority>.8</priority>
   </url>
   <url>
+    <!-- Add the Yoast SEO sitemap URL here -->
+    <loc>https://blog.gobro.studio/sitemap_index.xml</loc> <!-- Replace with your Yoast SEO sitemap URL -->
+    <lastmod>2024-02-22T15:02:24.021Z</lastmod> <!-- Use the last modification date of the Yoast SEO sitemap -->
+  </url>
+  <url>
     <loc>https://qualityestimation.us/contact</loc>
     <lastmod>2024-02-06T15:02:24.021Z</lastmod>
     <changefreq>yearly</changefreq>
@@ -41,6 +46,4 @@
     <changefreq>yearly</changefreq>
     <priority>.8</priority>
   </url>
-
-
 </urlset>
