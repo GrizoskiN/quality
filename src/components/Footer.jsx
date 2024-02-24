@@ -187,7 +187,7 @@ const arrowContact = (
 
 const Footer = () => {
   return (
-    <div className="bg-black mt-32 py-16 ">
+    <div className="bg-black mt-32 py-16 relative">
       <div className="flex w-10/12 flex-col md:flex-row lg:w-3/4 m-auto md:justify-between lg:h-96 relative md:border-y-[1px] border-white/50 md:py-11">
         <div className="flex flex-col items-start md:items-center justify-center md:w-1/2 ">
           <h1 className="text-white text-3xl lg:text-6xl mb-9 lg:ml-9">
@@ -225,6 +225,7 @@ const Footer = () => {
         </div>
 
         <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 w-[1px] bg-white/20"></div>
+      <a href="https://gobro.studio/" className="md:absolute md:-bottom-11 md:left-1/2 md:-translate-x-1/2 text-gray-300 font-light pt-16">Designed and developed by GoBro Studio</a>
       </div>
     </div>
   );
