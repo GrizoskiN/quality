@@ -187,7 +187,7 @@ const arrowContact = (
 
 const Footer = () => {
   return (
-    <div className="bg-black mt-32 py-16 relative">
+    <div className="bg-black  py-16 relative">
       <div className="flex w-10/12 flex-col md:flex-row lg:w-3/4 m-auto md:justify-between lg:h-96 relative md:border-y-[1px] border-white/50 md:py-11">
         <div className="flex flex-col items-start md:items-center justify-center md:w-1/2 ">
           <h1 className="text-white text-3xl lg:text-6xl mb-9 lg:ml-9">

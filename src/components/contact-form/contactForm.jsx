@@ -52,7 +52,7 @@ const ContactForm = () => {
   return (
     <>
       <form
-        className="bg-black py-11 mt-11 lg:mt-0  m-auto"
+        className="bg-black py-11 mt-11 mb-32 lg:mt-0  m-auto"
         onSubmit={handleSubmit(submitHandler)}>
         <div className="w-10/12 m-auto">
           <div className="flex flex-col lg:flex-row items-center mb-5 w-full justify-center gap-5 ">
