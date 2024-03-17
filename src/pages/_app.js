@@ -33,51 +33,42 @@ export default function App({ Component, pageProps }) {
 
   const router = useRouter();
   return (
-  <>
-     <Script id='google-analytics' strategy='afterInteractive'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <>
+    
+     
+      <ApolloProvider client={client}>
+        <main className={industryFont.className}>
+          <Menu handleMenus={handleActive} />
+          {/* <Submenu /> */}
+          <ScrollToTopButton />
+          <AnimatePresence key={router.asPath} mode="wait">
+            <main>
+              <Component {...pageProps} />
+            </main>
+            <motion.div
+              className="slide-out"
+              initial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0 }}
+              transition={{
+                duration: 1.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}></motion.div>
+            <motion.div
+              className="slide-in"
+              initial={{ scaleY: 1 }}
+              animate={{ scaleY: 0 }}
+              exit={{ scaleY: 0 }}
+              transition={{
+                duration: 1.6,
+                delay: 0.01,
+                ease: [0.22, 1, 0.36, 1],
+              }}></motion.div>
+          </AnimatePresence>
 
-          gtag('config', 'G-XHTYEDSRH5');
-        `}
-      </Script> 
-  
-    <ApolloProvider client={client} >
-      <main className={industryFont.className}>
-        <Menu handleMenus={handleActive} />
-        {/* <Submenu /> */}
-        <ScrollToTopButton />
-        <AnimatePresence key={router.asPath} mode="wait">
-          <main>
-            <Component {...pageProps} />
-          </main>
-          <motion.div
-            className="slide-out"
-            initial={{ scaleY: 1}}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 0 }}
-            transition={{
-              duration: 1.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}></motion.div>
-          <motion.div
-            className="slide-in"
-            initial={{ scaleY: 1 }}
-            animate={{ scaleY: 0 }}
-            exit={{ scaleY: 0 }}
-            transition={{
-              duration: 1.6,
-              delay: 0.01,
-              ease: [0.22, 1, 0.36, 1],
-            }}></motion.div>
-        </AnimatePresence>
-
-        <Footer />
-      </main>
-    </ApolloProvider>
+          <Footer />
+        </main>
+      </ApolloProvider>
     </>
-
   );
 }
