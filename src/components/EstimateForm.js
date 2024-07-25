@@ -39,8 +39,28 @@ const ImprovedEstimateForm = () => {
         }
     };
 
-    const nextStep = () => setCurrentStep(currentStep + 1);
+    const nextStep = () => {
+        if (isStepValid()) {
+            setCurrentStep(currentStep + 1);
+        }
+    };
+
     const prevStep = () => setCurrentStep(currentStep - 1);
+
+    const isStepValid = () => {
+        switch (currentStep) {
+            case 1:
+                return formData.name && formData.email && formData.phone;
+            case 2:
+                return formData.location && formData.projectType;
+            case 3:
+                return formData.squareFootage && formData.projectDetails && formData.materials;
+            case 4:
+                return true; // No required fields in step 4
+            default:
+                return false;
+        }
+    };
 
     return (
         <div className="max-w-md mx-auto p-4">
@@ -58,7 +78,12 @@ const ImprovedEstimateForm = () => {
                         </button>
                     )}
                     {currentStep < 4 && (
-                        <button type="button" onClick={nextStep} className="bg-blue-600 text-white p-2 rounded-md">
+                        <button 
+                            type="button" 
+                            onClick={nextStep} 
+                            className={`bg-blue-600 text-white p-2 rounded-md ${!isStepValid() && 'opacity-50 cursor-not-allowed'}`} 
+                            disabled={!isStepValid()}
+                        >
                             Next
                         </button>
                     )}
